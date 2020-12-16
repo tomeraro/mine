@@ -1,0 +1,8 @@
+<div *ngIf="showAction" class="action">
+  <button (click)="buttonClicked()">
+    <span *ngIf="!isCartMode; else cartMode">+</span>
+    <ng-template #cartMode>-</ng-template>
+  </button>
+</div>
+<div><img src="{{pokemon.url}}"></div>
+<div>{{pokemon.name | titlecase}}</div>

@@ -1,0 +1,16 @@
+<div *ngIf="cartItems$ | async as cartItems">
+  <div class="cart__empty" *ngIf="cartItems.size === 0; else showCart">Cart is empty.</div>
+  <ng-template #showCart>
+      <p class="pokemon-list__title">Added to cart: </p>
+      <mat-list role="list" class="pokemon-list__container">
+          <app-pokemon-item *ngFor="let pokemon of cartItems | keyvalue"
+                            #pokemonItem
+                            id="cart-item-{{pokemon.key}}"
+                            [pokemon]="pokemon.value"
+                            [isCartMode]="true"
+                            (onActionClick)="deletePokemonFromCart($event)"
+                            [showAction]="true"></app-pokemon-item>
+      </mat-list>
+      <button class="cart__clear" (click)="clearCart()">Clear</button>
+  </ng-template>
+</div>

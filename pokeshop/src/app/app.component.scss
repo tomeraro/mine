@@ -1,0 +1,25 @@
+.app-surface {
+    padding: 1rem;
+}
+
+@mixin pokemons-generic {
+    .pokemon-list {
+        &__title {
+            font-size: x-large;
+            margin: 2rem;
+        }
+    
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+::ng-deep .cart__clear-dialog {
+    mat-dialog-container {
+        background-color: #e8e8e8;
+        opacity: 1;
+    }
+}

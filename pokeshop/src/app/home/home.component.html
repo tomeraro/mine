@@ -1,0 +1,10 @@
+<div *ngIf="pokemons$ | async as pokemons">
+    <p class="pokemon-list__title">Pokemons list ({{pokemons.length}}):</p>
+    <mat-list role="list" class="pokemon-list__container">
+        <app-pokemon-item *ngFor="let pokemon of pokemons"
+                            [pokemon]="pokemon"
+                            [isCartMode]="false"
+                            (onActionClick)="addPokemonToCart($event)"
+                            [showAction]="!isPokemonInCart(pokemon.name)"></app-pokemon-item>
+    </mat-list>
+</div>

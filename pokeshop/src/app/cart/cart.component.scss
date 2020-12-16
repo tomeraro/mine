@@ -1,0 +1,29 @@
+@import './../app.component.scss';
+
+:host {
+  .cart {
+    &__empty {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 70px;  
+    }
+
+    &__clear {
+      border: 0;
+      border-radius: 5px;
+      background-color: #034b5091;
+      color: #ffffff;
+      padding: 10px 25px;
+      font-size: 16px;
+      margin: 25px;
+      cursor: pointer;  
+    }
+  }
+
+  .animateOut {
+    opacity: 0;
+    transition: 0.5s ease-in-out all;
+  }
+
+  @include pokemons-generic;
+}

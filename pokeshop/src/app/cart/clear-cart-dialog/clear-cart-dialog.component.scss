@@ -1,0 +1,22 @@
+:host {
+  color: #034b5091;
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      border: 0;
+      border-radius: 5px;
+      background-color: #034b5091;
+      color: #ffffff;
+      padding: 10px 25px;
+      font-size: 14px;
+      outline: none;
+      margin: 0 5px;
+      cursor: pointer;
+      &:nth-child(1) {
+        background-color: #888181;
+      }
+    }
+  }
+}

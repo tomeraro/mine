@@ -1,0 +1,25 @@
+.header {
+    &__container {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__item {
+        color: white;
+        cursor: pointer;
+        &:hover {
+            color: pink;
+        }
+        position: relative;
+        .indication {
+            position: absolute;
+            top: 5px;
+            left: 50px;
+            background-color: red;
+            width: 20px;
+            border-radius: 50%;
+            text-align: center;
+        }
+    }
+}

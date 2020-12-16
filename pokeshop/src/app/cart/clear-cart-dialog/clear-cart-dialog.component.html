@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Clear cart</h2>
+
+<mat-dialog-content>
+  Are you sure you want to clear your cart?
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true">No</button>
+  <button mat-button (click)="clearCart()">Yes</button>
+</mat-dialog-actions>
